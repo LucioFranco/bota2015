@@ -11,10 +11,11 @@ int* getNotes(int score)
   int result[] = {};
   switch(score)
   {
-    case 1:
+    case 12:
+      Serial.println("yes");
       result[0] = 1;
       result[1] = 2;
-
+    
     default:
       result[0] = score;
   }
@@ -65,7 +66,6 @@ void receiveData(int byteCount)
 {
   while(Wire.available())
   {
-    Wire.read();
     score = Wire.read();
     Serial.println(score);
     int *notes = getNotes(score);
