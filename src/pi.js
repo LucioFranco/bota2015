@@ -11,7 +11,7 @@ exports.init = function () {
 exports.send = function (score) {
   var buf = new Buffer([score]);
   console.log(score);
-  wire.writeBytes(score, score, function (err) {
+  wire.writeByte(0x0, function (err) {
     console.log(err);
   });
 }
