@@ -10,6 +10,7 @@ exports.init = function () {
 
 exports.send = function (score) {
   var buf = new Buffer([score]);
+  console.log(score.toString(16));
   wire.writeBytes(score.toString(16), score, function (err) {
     console.log(err);
   });
