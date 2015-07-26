@@ -65,7 +65,8 @@ void receiveData(int byteCount)
 {
   while(Wire.available())
   {
-    score = (int)Wire.read();
+    Wire.read();
+    score = Wire.read();
     Serial.println(score);
     int *notes = getNotes(score);
     play(notes, (sizeof(notes)/sizeof(int)));
