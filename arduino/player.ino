@@ -12,8 +12,8 @@ int* getNotes(int score)
   switch(score)
   {
     case 1:
-      result[0] = 1;
-      result[1] = 2;
+      result[0] = 10;
+      result[1] = 13;
 
     default:
       result[0] = score;
