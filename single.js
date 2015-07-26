@@ -1,4 +1,4 @@
 var pi = require('./src/pi');
 
 
-pi.send(parseInt(process.argv[3], 10));
+pi.send(parseInt(process.argv[2], 10));
