@@ -9,7 +9,8 @@ exports.init = function () {
 }
 
 exports.send = function (score) {
-  wire.writeByte(score, function (err) {
+  var buf = new Buffer([score]);
+  wire.writeBytes(0x0, score, function (err) {
     console.log(err);
   });
 }
